@@ -25,7 +25,6 @@ Not: Bu proje, ışık değişimlerinden ve gölgelerden etkilenmemek için "Ba�
 Projeyi bilgisayarınızda çalıştırmak için aşağıdaki adımları izleyin.
 
 1. Projeyi Klonlayın
-Bash
 
 git clone https://github.com/KULLANICI_ADINIZ/optik-form-okuyucu.git
 cd optik-form-okuyucu
@@ -33,15 +32,12 @@ cd optik-form-okuyucu
 2. Gerekli Kütüphaneleri Yükleyin
 Projenin çalışması için opencv-python, numpy, matplotlib, pandas ve openpyxl kütüphanelerine ihtiyaç vardır.
 
-Bash
-
 pip install opencv-python numpy matplotlib pandas openpyxl
+
 💻 Kullanım
 Okunacak optik form resmini proje klasörüne cevap.jpeg (veya kodda belirlediğiniz isimle) ekleyin.
 
 main.py dosyasını çalıştırın:
-
-Bash
 
 python main.py
 Program çalıştıktan sonra:
