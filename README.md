@@ -47,6 +47,7 @@ Program çalıştıktan sonra:
 Sonuçlar Sinav_Sonuclari.xlsx dosyasına satır olarak eklenir.
 
 📂 Proje Yapısı
+
 ├── main.py               # Ana kaynak kod
 
 ├── cevap.jpeg             # Okunacak örnek optik form
