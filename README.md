@@ -79,10 +79,8 @@ Puanlama: Tespit edilen şıklar, cevap anahtarı ile karşılaştırılır.
 <img width="303" height="619" alt="image" src="https://github.com/user-attachments/assets/c23b68d6-346f-457c-aefa-8a68aecbecb6" />
 
 🤝 Katkıda Bulunma
-Bu projeyi Fork'layın.
 
-📄 Lisans
-Bu proje MIT lisansı altında lisanslanmıştır.
+Bu projeyi Fork'layın.
 
 👨‍💻 Geliştirici
 Halil BAŞPINAR
