@@ -52,6 +52,7 @@ Sonuçlar Sinav_Sonuclari.xlsx dosyasına satır olarak eklenir.
 ├── Sinav_Sonuclari.xlsx # Otomatik oluşturulan Excel raporu
 ├── Sonuc_2212506062.jpg # İşlenmiş çıktı örneği
 └── README.md            # Proje dökümantasyonu
+
 ⚙️ Nasıl Çalışır? (Algoritma Mantığı)
 Ön İşleme: Görüntü gri tonlamaya çevrilir ve bulanıklaştırılır (Gaussian Blur).
 
