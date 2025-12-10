@@ -26,7 +26,7 @@ Projeyi bilgisayarınızda çalıştırmak için aşağıdaki adımları izleyin
 
 1. Projeyi Klonlayın
 
-git clone https://github.com/KULLANICI_ADINIZ/optik-form-okuyucu.git
+git clone https://github.com/halilbsp/optik-form-okuyucu.git
 cd optik-form-okuyucu
 
 2. Gerekli Kütüphaneleri Yükleyin
@@ -73,14 +73,6 @@ Puanlama: Tespit edilen şıklar, cevap anahtarı ile karşılaştırılır.
 
 🤝 Katkıda Bulunma
 Bu projeyi Fork'layın.
-
-Yeni bir özellik dalı oluşturun (git checkout -b feature/YeniOzellik).
-
-Değişikliklerinizi commit edin (git commit -m 'Yeni özellik eklendi').
-
-Dalınızı Push edin (git push origin feature/YeniOzellik).
-
-Bir Pull Request oluşturun.
 
 📄 Lisans
 Bu proje MIT lisansı altında lisanslanmıştır.
