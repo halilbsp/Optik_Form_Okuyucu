@@ -47,11 +47,11 @@ Program çalıştıktan sonra:
 Sonuçlar Sinav_Sonuclari.xlsx dosyasına satır olarak eklenir.
 
 📂 Proje Yapısı
-├── main.py              # Ana kaynak kod
-├── cevap.jpeg           # Okunacak örnek optik form
-├── Sinav_Sonuclari.xlsx # Otomatik oluşturulan Excel raporu
-├── Sonuc_2212506062.jpg # İşlenmiş çıktı örneği
-└── README.md            # Proje dökümantasyonu
+├── main.py               # Ana kaynak kod
+├── cevap.jpeg            # Okunacak örnek optik form
+├── Sinav_Sonuclari.xlsx  # Otomatik oluşturulan Excel raporu
+├── Sonuc_2212506062.jpg  # İşlenmiş çıktı örneği
+└── README.md             # Proje dökümantasyonu
 
 ⚙️ Nasıl Çalışır? (Algoritma Mantığı)
 Ön İşleme: Görüntü gri tonlamaya çevrilir ve bulanıklaştırılır (Gaussian Blur).
