@@ -1,100 +1,129 @@
-📝 Optik Form Okuyucu ve Puanlama Sistemi
-(Optical Mark Recognition - OMR System)
-Bu proje, Python ve OpenCV kütüphanelerini kullanarak optik formları (test sınav kağıtlarını) tarayan, cevapları algılayan, otomatik puanlayan ve sonuçları Excel dosyasına kaydeden bir görüntü işleme uygulamasıdır.
+# 📝 Optik Form Okuyucu ve Puanlama Sistemi
 
-Not: Bu proje, ışık değişimlerinden ve gölgelerden etkilenmemek için "Bağıl Koyuluk Algoritması" (Relative Darkness Intensity) kullanır.
+### (Optical Mark Recognition – OMR)
 
-🚀 Özellikler
-📷 Otomatik Algılama: Kağıdın köşe noktalarını bulur ve perspektif düzeltmesi (Bird's Eye View) yapar.
+![Python](https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge\&logo=python)
+![OpenCV](https://img.shields.io/badge/OpenCV-Computer%20Vision-green?style=for-the-badge\&logo=opencv)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-orange?style=for-the-badge\&logo=pandas)
 
-🧠 Akıllı Cevap Okuma: Sabit bir siyahlık eşiği yerine, o satırdaki en koyu şıkkı analiz eder. Bu sayede gölgeli fotoğraflarda bile doğru sonuç verir.
+Bu proje, **Python** ve **OpenCV** kullanarak optik formları (test/sınav kâğıtları) okuyan, cevapları algılayan, **otomatik puanlayan** ve sonuçları **Excel (.xlsx)** dosyasına kaydeden bir görüntü işleme uygulamasıdır.
 
-✍️ Görsel İşaretleme:
+> **Önemli Not:** Sistem, ışık değişimleri ve gölgelerden etkilenmemek için **Bağıl Koyuluk Algoritması (Relative Darkness Intensity)** kullanır. Sabit eşik yerine satır içi karşılaştırma yapar.
 
-✅ Doğru cevaplar Yeşil
+---
 
-❌ Yanlış cevaplar Kırmızı
+## 🚀 Özellikler
 
-🔵 Yanlış yapılan sorunun doğrusu Mavi ile işaretlenir.
+* **📷 Otomatik Algılama:** Kâğıdın köşe noktalarını bulur ve perspektif düzeltmesi (Bird’s Eye View) uygular.
+* **🧠 Akıllı Cevap Okuma:** Her soruda en koyu şıkkı tespit eder; gölgeli/heterojen ışıkta dahi yüksek doğruluk sağlar.
+* **✍️ Görsel İşaretleme:**
 
-📊 Raporlama: Öğrenci numarası, doğru/yanlış sayıları ve puan, resmin üzerine yazılır ve bir Excel (.xlsx) dosyasına otomatik olarak eklenir.
+  * ✅ Doğru cevaplar **Yeşil**
+  * ❌ Yanlış cevaplar **Kırmızı**
+  * 🔵 Yanlış yapılan sorunun **doğru şıkkı Mavi**
+* **📊 Raporlama:** Öğrenci numarası, doğru/yanlış sayıları ve puan; hem görüntü üzerine yazılır hem de **Excel** dosyasına eklenir.
+* **🛡️ Hata Kontrolü:** Boş bırakılan ve **çoklu işaretlenen** sorular tespit edilir.
 
-🛡️ Hata Kontrolü: Çift işaretlemeleri (Çoklu) ve boş bırakılan soruları tespit eder.
+---
 
-🛠️ Kurulum
-Projeyi bilgisayarınızda çalıştırmak için aşağıdaki adımları izleyin.
+## 🛠️ Kurulum
 
-1. Projeyi Klonlayın
-Bash
+### 1️⃣ Projeyi Klonlayın
 
+```bash
 git clone https://github.com/halilbsp/optik-form-okuyucu.git
 cd optik-form-okuyucu
+```
 
-2. Gerekli Kütüphaneleri Yükleyin
-Projenin çalışması için opencv-python, numpy, matplotlib, pandas ve openpyxl kütüphanelerine ihtiyaç vardır.
+### 2️⃣ Gerekli Kütüphaneleri Yükleyin
 
-Bash
-
+```bash
 pip install -r requirements.txt
-ya da
+```
+
+> Alternatif manuel kurulum:
+
+```bash
 pip install opencv-python numpy matplotlib pandas openpyxl
+```
 
-💻 Kullanım
-Okunacak optik form resmini proje klasörüne cevap.jpeg (veya kodda belirlediğiniz isimle) ekleyin.
+---
 
-main.py dosyasını çalıştırın:
+## 💻 Kullanım
 
-Bash
+1. Okunacak optik form görselini proje klasörüne ekleyin (örn. `cevap.jpeg`).
+2. `main.py` dosyasını çalıştırın:
 
+```bash
 python main.py
-Program çalıştıktan sonra:
+```
 
-İşlenmiş ve puanlanmış resim Sonuc_OGRENCINO.jpg olarak kaydedilir.
+### 📌 Çıktılar
 
-Sonuçlar Sinav_Sonuclari.xlsx dosyasına satır olarak eklenir.
+* İşlenmiş ve puanlanmış görsel: `Sonuc_<ogrenci_no>.jpg`
+* Excel raporu: `Sinav_Sonuclari.xlsx`
 
-📂 Proje Yapısı
-├── main.py              # Ana kaynak kod
-├── cevap.jpeg           # Okunacak örnek optik form
-├── Sinav_Sonuclari.xlsx # Otomatik oluşturulan Excel raporu
-├── Sonuc_2212506062.jpg # İşlenmiş çıktı örneği
-├── requirements.txt     # Gerekli kütüphaneler listesi
-└── README.md            # Proje dökümantasyonu
-⚙️ Nasıl Çalışır? (Algoritma Mantığı)
-Ön İşleme: Görüntü gri tonlamaya çevrilir ve bulanıklaştırılır (Gaussian Blur).
+---
 
-Kenar Tespiti: Canny algoritması ile kağıdın dış hatları bulunur.
+## 📂 Proje Yapısı
 
-Perspektif Düzeltme: Kağıdın 4 köşesi tespit edilir ve kuş bakışı (dik) görünüme getirilir.
+```
+├── main.py               # Ana kaynak kod
+├── cevap.jpeg            # Okunacak örnek optik form
+├── Sinav_Sonuclari.xlsx  # Otomatik oluşturulan Excel raporu
+├── Sonuc_2212506062.jpg  # Örnek işlenmiş çıktı
+├── requirements.txt      # Bağımlılıklar
+└── README.md             # Proje dokümantasyonu
+```
 
-Daire Tespiti: Hough Circle Transform kullanılarak şıklar (daireler) tespit edilir.
+---
 
-Sıralama ve Gruplama: Bulunan daireler önce satırlara (sorulara), sonra sütunlara (şıklara) göre koordinat düzleminde sıralanır.
+## ⚙️ Algoritma Mantığı
 
-Cevap Analizi: Her şıkkın içindeki piksel yoğunluğu ölçülür. O satırdaki en koyu alan işaretlenmiş kabul edilir.
+1. **Ön İşleme:** Görüntü gri tonlamaya çevrilir ve Gaussian Blur uygulanır.
+2. **Kenar Tespiti:** Canny algoritması ile kâğıdın dış hatları bulunur.
+3. **Perspektif Düzeltme:** Dört köşe tespit edilerek kuş bakışı görünüme dönüştürülür.
+4. **Daire Tespiti:** Hough Circle Transform ile şık daireleri algılanır.
+5. **Sıralama & Gruplama:** Daireler satır (soru) ve sütun (şık) bazında sıralanır.
+6. **Cevap Analizi:** Her şıkkın piksel yoğunluğu ölçülür; satırdaki en koyu alan işaretli kabul edilir.
+7. **Puanlama:** Sonuçlar cevap anahtarıyla karşılaştırılır ve Excel’e yazılır.
 
-Puanlama: Tespit edilen şıklar, cevap anahtarı ile karşılaştırılır.
+---
 
-📸 Ekran Görüntüleri
-<img width="400" alt="Sonuç Ekranı" src="https://www.google.com/search?q=https://github.com/user-attachments/assets/c23b68d6-346f-457c-aefa-8a68aecbecb6" />
+## 📸 Ekran Görüntüleri
 
-🤝 Katkıda Bulunma
-Bu projeyi Fork'layın.
+> Örnek çıktı ve işaretleme görselleri için GitHub depo sayfasına bakınız.
 
-Yeni bir özellik dalı oluşturun (git checkout -b feature/YeniOzellik).
+---
 
-Değişikliklerinizi commit edin (git commit -m 'Yeni özellik eklendi').
+## 🤝 Katkıda Bulunma
 
-Dalınızı Push edin (git push origin feature/YeniOzellik).
+1. Bu projeyi **Fork**’layın.
+2. Yeni bir dal oluşturun:
 
-Bir Pull Request oluşturun.
+   ```bash
+   git checkout -b feature/YeniOzellik
+   ```
+3. Değişikliklerinizi commit edin:
 
-📄 Lisans
-Bu proje MIT lisansı altında lisanslanmıştır.
+   ```bash
+   git commit -m "Yeni özellik eklendi"
+   ```
+4. Dalınızı push edin:
 
-👨‍💻 Geliştirici
-Halil BAŞPINAR
+   ```bash
+   git push origin feature/YeniOzellik
+   ```
+5. **Pull Request** oluşturun.
 
-GitHub: @halilbsp
+---
 
-LinkedIn: www.linkedin.com/in/halil-başpınar-0a7478384
+## 🎓 Teşekkür
+
+Bu proje, **Dijital Görüntü Çözümleme** dersi kapsamında geliştirilmiştir. Değerli katkıları ve rehberliği için **Furkan Atlan** hocama teşekkür ederim.
+
+---
+
+## 👨‍💻 Geliştirici
+
+**Halil BAŞPINAR**
