@@ -129,4 +129,5 @@ Bu proje, **Dijital Görüntü Çözümleme** dersi kapsamında geliştirilmişt
 
 **Halil BAŞPINAR**
 
-![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)    www.linkedin.com/in/halil-başpınar-0a7478384
+![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)    
+www.linkedin.com/in/halil-başpınar-0a7478384
