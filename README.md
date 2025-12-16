@@ -68,12 +68,12 @@ python main.py
 ## 📂 Proje Yapısı
 
 ```
-├── main.py               # Ana kaynak kod
-├── cevap.jpeg            # Okunacak örnek optik form
-├── Sinav_Sonuclari.xlsx  # Otomatik oluşturulan Excel raporu
-├── Sonuc_2212506062.jpg  # Örnek işlenmiş çıktı
-├── requirements.txt      # Bağımlılıklar
-└── README.md             # Proje dokümantasyonu
+├── optik_form_excel.ipynb # Ana kaynak kod
+├── cevap.jpeg             # Okunacak örnek optik form
+├── Sinav_Sonuclari.xlsx   # Otomatik oluşturulan Excel raporu
+├── Sonuc_2212506062.jpg   # Örnek işlenmiş çıktı
+├── requirements.txt       # Bağımlılıklar
+└── README.md              # Proje dokümantasyonu
 ```
 
 ---
