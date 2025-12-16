@@ -1,45 +1,43 @@
-# 📝 Optik Form Okuyucu ve Puanlama Sistemi
-### (Optical Mark Recognition - OMR System)
+📝 Optik Form Okuyucu ve Puanlama Sistemi
+(Optical Mark Recognition - OMR System)
+Bu proje, Python ve OpenCV kütüphanelerini kullanarak optik formları (test sınav kağıtlarını) tarayan, cevapları algılayan, otomatik puanlayan ve sonuçları Excel dosyasına kaydeden bir görüntü işleme uygulamasıdır.
 
-![Python](https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python)
-![OpenCV](https://img.shields.io/badge/OpenCV-Computer%20Vision-green?style=for-the-badge&logo=opencv)
-![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-orange?style=for-the-badge&logo=pandas)
+Not: Bu proje, ışık değişimlerinden ve gölgelerden etkilenmemek için "Bağıl Koyuluk Algoritması" (Relative Darkness Intensity) kullanır.
 
-Bu proje, **Python** ve **OpenCV** kütüphanelerini kullanarak optik formları (test sınav kağıtlarını) tarayan, cevapları algılayan, otomatik puanlayan ve sonuçları **Excel** dosyasına kaydeden bir görüntü işleme uygulamasıdır.
+🚀 Özellikler
+📷 Otomatik Algılama: Kağıdın köşe noktalarını bulur ve perspektif düzeltmesi (Bird's Eye View) yapar.
 
-> **Not:** Bu proje, ışık değişimlerinden ve gölgelerden etkilenmemek için **"Bağıl Koyuluk Algoritması" (Relative Darkness Intensity)** kullanır.
+🧠 Akıllı Cevap Okuma: Sabit bir siyahlık eşiği yerine, o satırdaki en koyu şıkkı analiz eder. Bu sayede gölgeli fotoğraflarda bile doğru sonuç verir.
 
----
+✍️ Görsel İşaretleme:
 
-## 🚀 Özellikler
+✅ Doğru cevaplar Yeşil
 
-* **📷 Otomatik Algılama:** Kağıdın köşe noktalarını bulur ve perspektif düzeltmesi (Bird's Eye View) yapar.
-* **🧠 Akıllı Cevap Okuma:** Sabit bir siyahlık eşiği yerine, o satırdaki en koyu şıkkı analiz eder. Bu sayede gölgeli fotoğraflarda bile doğru sonuç verir.
-* **✍️ Görsel İşaretleme:**
-    * ✅ Doğru cevaplar **Yeşil**
-    * ❌ Yanlış cevaplar **Kırmızı**
-    * 🔵 Yanlış yapılan sorunun doğrusu **Mavi** ile işaretlenir.
-* **📊 Raporlama:** Öğrenci numarası, doğru/yanlış sayıları ve puan, resmin üzerine yazılır ve bir **Excel (.xlsx)** dosyasına otomatik olarak eklenir.
-* **🛡️ Hata Kontrolü:** Çift işaretlemeleri (Çoklu) ve boş bırakılan soruları tespit eder.
+❌ Yanlış cevaplar Kırmızı
 
----
+🔵 Yanlış yapılan sorunun doğrusu Mavi ile işaretlenir.
 
-## 🛠️ Kurulum
+📊 Raporlama: Öğrenci numarası, doğru/yanlış sayıları ve puan, resmin üzerine yazılır ve bir Excel (.xlsx) dosyasına otomatik olarak eklenir.
 
+🛡️ Hata Kontrolü: Çift işaretlemeleri (Çoklu) ve boş bırakılan soruları tespit eder.
+
+🛠️ Kurulum
 Projeyi bilgisayarınızda çalıştırmak için aşağıdaki adımları izleyin.
 
-### 1. Projeyi Klonlayın
-```bash
-git clone [https://github.com/halilbsp/optik-form-okuyucu.git](https://github.com/halilbsp/optik-form-okuyucu.git)
+1. Projeyi Klonlayın
+Bash
+
+git clone https://github.com/halilbsp/optik-form-okuyucu.git
 cd optik-form-okuyucu
 
 2. Gerekli Kütüphaneleri Yükleyin
-Proje dizininde requirements.txt dosyasını kullanarak bağımlılıkları yükleyebilirsiniz:
+Projenin çalışması için opencv-python, numpy, matplotlib, pandas ve openpyxl kütüphanelerine ihtiyaç vardır.
 
 Bash
 
 pip install -r requirements.txt
-(Alternatif manuel kurulum: pip install opencv-python numpy matplotlib pandas openpyxl)
+ya da
+pip install opencv-python numpy matplotlib pandas openpyxl
 
 💻 Kullanım
 Okunacak optik form resmini proje klasörüne cevap.jpeg (veya kodda belirlediğiniz isimle) ekleyin.
@@ -51,90 +49,17 @@ Bash
 python main.py
 Program çalıştıktan sonra:
 
-İşlenmiş ve puanlanmış resim Sonuc_2212506062.jpg formatında kaydedilir.
+İşlenmiş ve puanlanmış resim Sonuc_OGRENCINO.jpg olarak kaydedilir.
 
 Sonuçlar Sinav_Sonuclari.xlsx dosyasına satır olarak eklenir.
 
 📂 Proje Yapısı
-
 ├── main.py              # Ana kaynak kod
 ├── cevap.jpeg           # Okunacak örnek optik form
 ├── Sinav_Sonuclari.xlsx # Otomatik oluşturulan Excel raporu
 ├── Sonuc_2212506062.jpg # İşlenmiş çıktı örneği
 ├── requirements.txt     # Gerekli kütüphaneler listesi
 └── README.md            # Proje dökümantasyonu
-Harika! İşte projenin için eksiksiz, profesyonel ve doğrudan kopyalayıp kullanabileceğin README.md dosyasının tamamı.
-
-Bunu kopyala ve projenin ana dizininde README.md adıyla kaydet.
-
-Markdown
-
-# 📝 Optik Form Okuyucu ve Puanlama Sistemi
-### (Optical Mark Recognition - OMR System)
-
-![Python](https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python)
-![OpenCV](https://img.shields.io/badge/OpenCV-Computer%20Vision-green?style=for-the-badge&logo=opencv)
-![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-orange?style=for-the-badge&logo=pandas)
-
-Bu proje, **Python** ve **OpenCV** kütüphanelerini kullanarak optik formları (test sınav kağıtlarını) tarayan, cevapları algılayan, otomatik puanlayan ve sonuçları **Excel** dosyasına kaydeden bir görüntü işleme uygulamasıdır.
-
-> **Not:** Bu proje, ışık değişimlerinden ve gölgelerden etkilenmemek için **"Bağıl Koyuluk Algoritması" (Relative Darkness Intensity)** kullanır.
-
----
-
-## 🚀 Özellikler
-
-* **📷 Otomatik Algılama:** Kağıdın köşe noktalarını bulur ve perspektif düzeltmesi (Bird's Eye View) yapar.
-* **🧠 Akıllı Cevap Okuma:** Sabit bir siyahlık eşiği yerine, o satırdaki en koyu şıkkı analiz eder. Bu sayede gölgeli fotoğraflarda bile doğru sonuç verir.
-* **✍️ Görsel İşaretleme:**
-    * ✅ Doğru cevaplar **Yeşil**
-    * ❌ Yanlış cevaplar **Kırmızı**
-    * 🔵 Yanlış yapılan sorunun doğrusu **Mavi** ile işaretlenir.
-* **📊 Raporlama:** Öğrenci numarası, doğru/yanlış sayıları ve puan, resmin üzerine yazılır ve bir **Excel (.xlsx)** dosyasına otomatik olarak eklenir.
-* **🛡️ Hata Kontrolü:** Çift işaretlemeleri (Çoklu) ve boş bırakılan soruları tespit eder.
-
----
-
-## 🛠️ Kurulum
-
-Projeyi bilgisayarınızda çalıştırmak için aşağıdaki adımları izleyin.
-
-### 1. Projeyi Klonlayın
-```bash
-git clone [https://github.com/halilbsp/optik-form-okuyucu.git](https://github.com/halilbsp/optik-form-okuyucu.git)
-cd optik-form-okuyucu
-2. Gerekli Kütüphaneleri Yükleyin
-Proje dizininde requirements.txt dosyasını kullanarak bağımlılıkları yükleyebilirsiniz:
-
-Bash
-
-pip install -r requirements.txt
-(Alternatif manuel kurulum: pip install opencv-python numpy matplotlib pandas openpyxl)
-
-💻 Kullanım
-Okunacak optik form resmini proje klasörüne cevap.jpeg (veya kodda belirlediğiniz isimle) ekleyin.
-
-main.py dosyasını çalıştırın:
-
-Bash
-
-python main.py
-Program çalıştıktan sonra:
-
-İşlenmiş ve puanlanmış resim Sonuc_2212506062.jpg formatında kaydedilir.
-
-Sonuçlar Sinav_Sonuclari.xlsx dosyasına satır olarak eklenir.
-
-📂 Proje Yapısı
-Plaintext
-
-├── main.py              # Ana kaynak kod
-├── cevap.jpeg           # Okunacak örnek optik form
-├── Sinav_Sonuclari.xlsx # Otomatik oluşturulan Excel raporu
-├── Sonuc_2212506062.jpg # İşlenmiş çıktı örneği
-├── requirements.txt     # Gerekli kütüphaneler listesi
-└── README.md            # Proje dökümantasyonu
-
 ⚙️ Nasıl Çalışır? (Algoritma Mantığı)
 Ön İşleme: Görüntü gri tonlamaya çevrilir ve bulanıklaştırılır (Gaussian Blur).
 
@@ -148,7 +73,7 @@ Sıralama ve Gruplama: Bulunan daireler önce satırlara (sorulara), sonra sütu
 
 Cevap Analizi: Her şıkkın içindeki piksel yoğunluğu ölçülür. O satırdaki en koyu alan işaretlenmiş kabul edilir.
 
-Puanlama: Tespit edilen şıklar, cevap anahtarı ile karşılaştırılır ve Excel'e yazılır.
+Puanlama: Tespit edilen şıklar, cevap anahtarı ile karşılaştırılır.
 
 📸 Ekran Görüntüleri
 <img width="400" alt="Sonuç Ekranı" src="https://www.google.com/search?q=https://github.com/user-attachments/assets/c23b68d6-346f-457c-aefa-8a68aecbecb6" />
@@ -164,8 +89,12 @@ Dalınızı Push edin (git push origin feature/YeniOzellik).
 
 Bir Pull Request oluşturun.
 
-🎓 Teşekkür
-Bu proje, Dijital Görüntü Çözümleme dersi kapsamında geliştirilmiştir. Değerli katkıları ve rehberliği için Furkan Atlan hocama teşekkür ederim.
+📄 Lisans
+Bu proje MIT lisansı altında lisanslanmıştır.
 
 👨‍💻 Geliştirici
 Halil BAŞPINAR
+
+GitHub: @halilbsp
+
+LinkedIn: www.linkedin.com/in/halil-başpınar-0a7478384
