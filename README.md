@@ -92,7 +92,8 @@ python main.py
 
 ## 📸 Ekran Görüntüleri
 
-> Örnek çıktı ve işaretleme görselleri için GitHub depo sayfasına bakınız.
+![Sonuc_2212506062](https://github.com/user-attachments/assets/355ade2f-de3e-47de-a220-ca4b0d7f106f)
+
 
 ---
 
@@ -127,3 +128,5 @@ Bu proje, **Dijital Görüntü Çözümleme** dersi kapsamında geliştirilmişt
 ## 👨‍💻 Geliştirici
 
 **Halil BAŞPINAR**
+
+![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)    www.linkedin.com/in/halil-başpınar-0a7478384
