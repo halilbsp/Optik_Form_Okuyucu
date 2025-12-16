@@ -1,10 +1,10 @@
 # 📝 Optik Form Okuyucu ve Puanlama Sistemi
 
 ### (Optical Mark Recognition – OMR)
-
-![Python](https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge\&logo=python)
-![OpenCV](https://img.shields.io/badge/OpenCV-Computer%20Vision-green?style=for-the-badge\&logo=opencv)
-![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-orange?style=for-the-badge\&logo=pandas)
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)
+![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
+![OpenCV](https://img.shields.io/badge/opencv-%23white.svg?style=for-the-badge&logo=opencv&logoColor=white)
 
 Bu proje, **Python** ve **OpenCV** kullanarak optik formları (test/sınav kâğıtları) okuyan, cevapları algılayan, **otomatik puanlayan** ve sonuçları **Excel (.xlsx)** dosyasına kaydeden bir görüntü işleme uygulamasıdır.
 
