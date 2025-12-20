@@ -52,10 +52,10 @@ pip install opencv-python numpy matplotlib pandas openpyxl
 ## 💻 Kullanım
 
 1. Okunacak optik form görselini proje klasörüne ekleyin (örn. `cevap.jpeg`).
-2. `main.py` dosyasını çalıştırın:
+2. `optik_form_excel.ipynb` dosyasını çalıştırın:
 
 ```bash
-python main.py
+optik_form_excel.ipynb
 ```
 
 ### 📌 Çıktılar
